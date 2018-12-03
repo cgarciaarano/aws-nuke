@@ -1,0 +1,50 @@
+regions:
+- global
+- us-east-1
+- us-east-2
+- us-west-1
+- us-west-2
+- ca-central-1
+- eu-central-1
+- eu-west-1
+- eu-west-2
+- eu-west-3
+- ap-northeast-1
+- ap-northeast-2
+- ap-northeast-3
+- ap-southeast-1
+- ap-southeast-2
+- ap-south-1
+- sa-east-1
+
+account-blacklist:
+- 1234567890
+
+accounts:
+  745902678934: 
+    filters:
+      IAMPolicy:
+      - arn:aws:iam::745902678934:policy/BillingFullAccess
+      IAMLoginProfile:
+      - admin
+      - cgarcia
+      IAMGroup:
+      - adminGroup
+      IAMUser:
+      - admin
+      - cgarcia
+      IAMUserAccessKey:
+      - cgarcia -> AKIAJNGDWGLHAMMM4VTQ
+      - cgarcia -> AKIAIZ6RPNHNH7KBKD4Q
+      IAMUserGroupAttachment:
+      - admin -> adminGroup
+      - cgarcia -> adminGroup
+      IAMGroupPolicyAttachment:
+      - adminGroup -> BillingFullAccess
+      - adminGroup -> AdministratorAccess
+      EC2KeyPair:
+      - charli
+      - charli_zooplus
+      S3Bucket:
+      - s3://charli.cloud.drive
+

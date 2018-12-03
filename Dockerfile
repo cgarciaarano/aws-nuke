@@ -25,4 +25,6 @@ COPY . /go/src/github.com/rebuy-de/aws-nuke
 WORKDIR /go/src/github.com/rebuy-de/aws-nuke
 RUN CGO_ENABLED=0 make install
 
-ENTRYPOINT ["/go/bin/aws-nuke"]
+WORKDIR /opt
+
+CMD /go/bin/aws-nuke -c config/nuke-config.yaml --access-key-id $AWS_ACCESS_KEY_ID --secret-access-key $AWS_SECRET_ACCESS_KEY

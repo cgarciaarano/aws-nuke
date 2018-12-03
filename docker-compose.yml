@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  nuke:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - AWS_ACCESS_KEY_ID=YOUR_KEY_ID
+      - AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
+    volumes:
+      - ./config/:/opt/config/
